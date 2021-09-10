@@ -17,5 +17,5 @@ data class Blog(
     var title: String,
     var subtitle: String,
     var description: String,
-    var user_name: String
+    var user_name: String?
 )
