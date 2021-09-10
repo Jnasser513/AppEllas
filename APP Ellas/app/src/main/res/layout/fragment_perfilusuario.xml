@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.nasser.appellas.ui.AppViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_base_vino"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:src="@mipmap/logo_app" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/circle"
+                android:src="@drawable/ic_configuraciones"
+                android:onClick="@{()-> viewmodel.goConfigurationFragment()}"
+                android:layout_marginLeft="46dp"
+                android:layout_marginStart="120dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="@color/color_base_vino"
+                android:onClick="@{()-> viewmodel.goAdminHomeFragment()}"
+                android:baselineAligned="false"
+                android:src="@drawable/ic_group" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_mujer_1_" />
+
+        <TextView
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nombre_de_usuario_text"
+            android:textColor="@color/color_iconos_negros" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/usuario_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/roberta_text_ejemplo"
+            android:textColorHint="@color/color_iconos_negros"
+            app:startIconDrawable="@drawable/ic_mujer_1_mini">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/user_input_text"
+                android:background="@drawable/home_card_style"
+                android:text="@{viewmodel.userProfileInput}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/email_de_usuario_ejemplo"
+            android:textColor="@color/color_iconos_negros" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/email_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email_example_correo_ejemplo"
+            android:textColorHint="@color/color_iconos_negros"
+            app:startIconDrawable="@drawable/ic_correo_electronico_vacio">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email_input_text"
+                android:background="@drawable/home_card_style"
+                android:text="@{viewmodel.emailProfileInput}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cambiar_contrasena_text"
+            android:textColor="@color/color_iconos_negros" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/change_password_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/contrasena_ejemplo"
+            android:textColorHint="@color/color_iconos_negros"
+            app:startIconDrawable="@drawable/ic_candado"
+            app:endIconDrawable="@drawable/ic_view"
+            app:endIconMode="password_toggle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password_input_text"
+                android:inputType="textPassword"
+                android:text="@{viewmodel.passwordProfileInput}"
+                android:background="@color/color_fondo_iconos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_marginRight="16dp"
+                android:id="@+id/logout_button"
+                android:layout_width="wrap_content"
+                android:onClick="@{()-> viewmodel.goLoginFragment()}"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_iconos_negros"
+                android:text="@string/cerrar_sesion_text"
+                style="?attr/materialButtonOutlinedStyle" />
+
+            <Button
+                android:layout_marginLeft="5dp"
+                android:id="@+id/eliminate_button"
+                android:onClick="@{()-> viewmodel.deleteAccount()}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_iconos_negros"
+                android:text="@string/eliminar_cuenta_ejemplo"
+                style="?attr/materialButtonOutlinedStyle" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

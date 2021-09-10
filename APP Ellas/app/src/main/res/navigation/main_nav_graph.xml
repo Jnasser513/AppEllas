@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/mapaFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        tools:layout="@layout/fragment_login"
+        android:name="com.nasser.appellas.fragments.LoginFragment"
+        android:label="LoginFragment" />
+    <fragment
+        android:id="@+id/registerFragment"
+        tools:layout="@layout/fragment_register"
+        android:name="com.nasser.appellas.fragments.RegisterFragment"
+        android:label="RegisterFragment" />
+    <fragment
+        android:id="@+id/passwordRecoveryFragment"
+        tools:layout="@layout/fragment_recovery_password"
+        android:name="com.nasser.appellas.fragments.PasswordRecoveryFragment"
+        android:label="PasswordRecoveryFragment" />
+    <fragment
+        android:id="@+id/pageHomeFragment"
+        tools:layout="@layout/fragment_home_page"
+        android:name="com.nasser.appellas.fragments.PageHomeFragment"
+        android:label="PageHomeFragment" />
+    <fragment
+        android:id="@+id/blogInformativeFragment"
+        tools:layout="@layout/fragment_informative_blog"
+        android:name="com.nasser.appellas.fragments.BlogInformativeFragment"
+        android:label="BlogInformativeFragment" />
+    <fragment
+        android:id="@+id/pageAdvisoryFragment"
+        tools:layout="@layout/fragment_advisory_page"
+        android:name="com.nasser.appellas.fragments.PageAdvisoryFragment"
+        android:label="PageAdvisoryFragment" />
+    <fragment
+        android:id="@+id/adminAccountsFragment"
+        tools:layout="@layout/fragment_admin_accounts"
+        android:name="com.nasser.appellas.fragments.AdminAccountsFragment"
+        android:label="AdminAccountsFragment" />
+    <fragment
+        android:id="@+id/adminFragment"
+        tools:layout="@layout/fragment_admin"
+        android:name="com.nasser.appellas.fragments.AdminFragment"
+        android:label="AdminFragment" />
+    <fragment
+        android:id="@+id/adminMapFragment"
+        tools:layout="@layout/fragment_admin_map"
+        android:name="com.nasser.appellas.fragments.AdminMapFragment"
+        android:label="AdminMapFragment" />
+    <fragment
+        android:id="@+id/configurationFragment"
+        tools:layout="@layout/fragment_configuration"
+        android:name="com.nasser.appellas.fragments.ConfigurationFragment"
+        android:label="ConfigurationFragment" />
+    <fragment
+        android:id="@+id/trustedContactsFragment"
+        tools:layout="@layout/fragment_trusted_contacts"
+        android:name="com.nasser.appellas.fragments.TrustedContactsFragment"
+        android:label="TrustedContactsFragment" />
+    <fragment
+        android:id="@+id/mapaFragment"
+        tools:layout="@layout/fragment_mapainformativo"
+        android:name="com.nasser.appellas.fragments.MapaFragment"
+        android:label="MapaFragment" />
+    <fragment
+        android:id="@+id/medicoFragment"
+        tools:layout="@layout/fragment_medico"
+        android:name="com.nasser.appellas.fragments.MedicoFragment"
+        android:label="MedicoFragment" />
+    <fragment
+        android:id="@+id/perfilUsuarioFragment"
+        tools:layout="@layout/fragment_perfilusuario"
+        android:name="com.nasser.appellas.fragments.PerfilUsuarioFragment"
+        android:label="PerfilUsuarioFragment" />
+    <fragment
+        android:id="@+id/psicologoFragment"
+        tools:layout="@layout/fragment_psicologo"
+        android:name="com.nasser.appellas.fragments.PsicologoFragment"
+        android:label="PsicologoFragment" />
+    <fragment
+        android:id="@+id/seccionJuridicaFragment"
+        tools:layout="@layout/fragment_seccionjuridica"
+        android:name="com.nasser.appellas.fragments.SeccionJuridicaFragment"
+        android:label="SeccionJuridicaFragment" />
+    <fragment
+        android:id="@+id/createBlogFragment"
+        android:name="com.nasser.appellas.fragments.CreateBlogFragment"
+        android:label="CreateBlogFragment"
+        tools:layout="@layout/fragment_create_blog"/>
+    <fragment
+        android:id="@+id/createContactFragment"
+        android:name="com.nasser.appellas.fragments.CreateContactFragment"
+        android:label="CreateContactFragment"
+        tools:layout="@layout/fragment_create_contact"/>
+    <fragment
+        android:id="@+id/alertFragment"
+        android:name="com.nasser.appellas.fragments.AlertaFragment"
+        android:label="AlertFragment"
+        tools:layout="@layout/fragment_alerta"/>
+    <fragment
+        android:id="@+id/informationPageFragment"
+        android:name="com.nasser.appellas.fragments.PaginaInfoFragment"
+        android:label="InformationPageFragment"
+        tools:layout="@layout/fragment_pagina_informacion"/>
+</navigation>

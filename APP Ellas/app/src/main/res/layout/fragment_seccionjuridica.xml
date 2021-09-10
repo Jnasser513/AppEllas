@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.nasser.appellas.ui.AppViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_base_vino">
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floating_action_configuration"
+            android:layout_width="92dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_gap"
+            android:backgroundTint="@color/color_fondo_iconos"
+            android:onClick="@{()-> viewmodel.goConfigurationFragment()}"
+            app:backgroundTint="@color/white"
+            app:borderWidth="1.5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rippleColor="@color/color_iconos_negros"
+            app:srcCompat="@drawable/ic_configuraciones"
+            tools:ignore="MissingConstraints,VectorDrawableCompat" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/minimum_gap"
+            android:src="@mipmap/logo_app"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floating_action_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_gap"
+            android:backgroundTint="@color/color_fondo_iconos"
+            android:onClick="@{()-> viewmodel.goProfileFragment()}"
+            app:backgroundTint="@color/white"
+            app:borderWidth="1.5dp"
+            app:layout_constraintEnd_toStartOf="@+id/floating_action_configuration"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rippleColor="@color/color_iconos_negros"
+            app:srcCompat="@drawable/ic_mujer2"
+            tools:ignore="MissingConstraints,VectorDrawableCompat" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:onClick="@{()-> viewmodel.goAdvisoryFragment()}"
+            android:background="@color/color_base_vino"
+            android:src="@drawable/ic_atras"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            tools:ignore="MissingConstraints" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/home_card_style"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/floating_action_user"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@color/color_fondo_iconos"
+                android:src="@drawable/ic_user_1"
+                app:rippleColor="@color/color_iconos_negros"
+                app:strokeColor="@color/color_iconos_negros"
+                app:strokeWidth="1dp" />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Abogado #1"
+                android:textColor="@color/color_iconos_negros"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@color/color_fondo_iconos"
+                android:onClick="@{()-> viewmodel.startShowMessage()}"
+                android:src="@drawable/ic_message_1"
+                app:rippleColor="@color/color_iconos_negros"
+                app:strokeColor="@color/color_iconos_negros"
+                app:strokeWidth="1dp" />
+
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="@dimen/minimum_gap"
+                android:background="@color/color_fondo_iconos"
+                android:onClick="@{() -> viewmodel.startShowCall()}"
+                android:src="@drawable/ic_llamada_telefonica"
+                app:rippleColor="@color/color_iconos_negros"
+                app:strokeColor="@color/color_iconos_negros"
+                app:strokeWidth="1dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/home_card_style"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.508"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@color/color_fondo_iconos"
+                android:src="@drawable/ic_user_1"
+                app:rippleColor="@color/color_iconos_negros"
+                app:strokeColor="@color/color_iconos_negros"
+                app:strokeWidth="1dp" />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Abogado #2"
+                android:textColor="@color/color_iconos_negros"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@color/color_fondo_iconos"
+                android:onClick="@{()-> viewmodel.startShowMessage()}"
+                android:src="@drawable/ic_message_1"
+                app:rippleColor="@color/color_iconos_negros"
+                app:strokeColor="@color/color_iconos_negros"
+                app:strokeWidth="1dp" />
+
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="@dimen/minimum_gap"
+                android:background="@color/color_fondo_iconos"
+                android:onClick="@{() -> viewmodel.startShowCall()}"
+                android:src="@drawable/ic_llamada_telefonica"
+                app:rippleColor="@color/color_iconos_negros"
+                app:strokeColor="@color/color_iconos_negros"
+                app:strokeWidth="1dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/home_card_style"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.508"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@color/color_fondo_iconos"
+                android:src="@drawable/ic_user_1"
+                app:rippleColor="@color/color_iconos_negros"
+                app:strokeColor="@color/color_iconos_negros"
+                app:strokeWidth="1dp" />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Abogado #3"
+                android:textColor="@color/color_iconos_negros"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@color/color_fondo_iconos"
+                android:onClick="@{()-> viewmodel.startShowMessage()}"
+                android:src="@drawable/ic_message_1"
+                app:rippleColor="@color/color_iconos_negros"
+                app:strokeColor="@color/color_iconos_negros"
+                app:strokeWidth="1dp" />
+
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="@dimen/minimum_gap"
+                android:background="@color/color_fondo_iconos"
+                android:onClick="@{() -> viewmodel.startShowCall()}"
+                android:src="@drawable/ic_llamada_telefonica"
+                app:rippleColor="@color/color_iconos_negros"
+                app:strokeColor="@color/color_iconos_negros"
+                app:strokeWidth="1dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/home_card_style"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.508"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@color/color_fondo_iconos"
+                android:src="@drawable/ic_user_1"
+                app:rippleColor="@color/color_iconos_negros"
+                app:strokeColor="@color/color_iconos_negros"
+                app:strokeWidth="1dp" />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Abogado #4"
+                android:textColor="@color/color_iconos_negros"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@color/color_fondo_iconos"
+                android:onClick="@{()-> viewmodel.startShowMessage()}"
+                android:src="@drawable/ic_message_1"
+                app:rippleColor="@color/color_iconos_negros"
+                app:strokeColor="@color/color_iconos_negros"
+                app:strokeWidth="1dp" />
+
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="@dimen/minimum_gap"
+                android:background="@color/color_fondo_iconos"
+                android:onClick="@{() -> viewmodel.startShowCall()}"
+                android:src="@drawable/ic_llamada_telefonica"
+                app:rippleColor="#FFC58F"
+                app:strokeColor="#FFC58F"
+                app:strokeWidth="1dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout5"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/home_card_style"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.508"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="#BF6716"
+                android:src="@drawable/ic_user_1"
+                app:rippleColor="#FFC58F"
+                app:strokeColor="#FFC58F"
+                app:strokeWidth="1dp" />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Abogado #5"
+                android:textColor="#FFC58F"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="#BF6716"
+                android:onClick="@{()-> viewmodel.startShowMessage()}"
+                android:src="@drawable/ic_message_1"
+                app:rippleColor="#FFC58F"
+                app:strokeColor="#FFC58F"
+                app:strokeWidth="1dp" />
+
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="@dimen/minimum_gap"
+                android:background="#BF6716"
+                android:onClick="@{() -> viewmodel.startShowCall()}"
+                android:src="@drawable/ic_llamada_telefonica"
+                app:rippleColor="#FFC58F"
+                app:strokeColor="#FFC58F"
+                app:strokeWidth="1dp" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:onClick="@{()-> viewmodel.goAlertFragment()}"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/circle"
+            android:src="@drawable/ic_megafono"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:rippleColor="#FFC58F"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginBottom="15dp"
+            android:text="@string/enviar_alerta_text"
+            android:textColor="@color/color_iconos_negros"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
