@@ -1,7 +1,5 @@
 # proyecto-borrachinfc
 # Manual Tecnico de AppEllas
-- Roberto Carlos Orellana Chavez
-- Sebastian Ernesto Magana Ramirez
 - Jose Roberto Nasser Sanchez
 ## Introduccion
 El manual tecnico tiene como objevito describir el diseno de la aplicacion y cada una de sus fases necesarias para la correcta utilidad de la aplicacion. Este manual describe los pasos necesarios para cualquier persona que tenga los requerimientos necesarios pueda realizar la instalación de la aplicacion en su dispositivo movil.
