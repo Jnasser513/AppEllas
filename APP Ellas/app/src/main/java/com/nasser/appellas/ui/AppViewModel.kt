@@ -552,7 +552,7 @@ class AppViewModel(private val appRepository: AppRepository): ViewModel() {
                     val newBlog = Blog(0,tittleInput.value!!,
                         subtittleInput.value!!,
                         descriptionInput.value!!,
-                        "jnasser")
+                        null)
                     appRepository.insertOrUpdateBlog(newBlog)
                     AppApi.service.createBlog(tittleInput.value!!, subtittleInput.value!!, descriptionInput.value!!)
                         .enqueue(object: Callback<Blogs>{
@@ -581,7 +581,7 @@ class AppViewModel(private val appRepository: AppRepository): ViewModel() {
                 }
                 else{
                     val newContact = TrustContacts(0,contactNameInput.value!!,
-                        numberContactInput.value!!.toInt(), "jnasser")
+                        numberContactInput.value!!.toInt(), null)
                     appRepository.insertOrUpdateContact(newContact)
                     AppApi.service.createContact(contactNameInput.value!!, numberContactInput.value!!.toInt())
                         .enqueue(object: Callback<Contacts>{
