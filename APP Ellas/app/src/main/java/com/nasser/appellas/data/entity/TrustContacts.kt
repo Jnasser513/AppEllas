@@ -14,5 +14,5 @@ data class TrustContacts(
     @PrimaryKey(autoGenerate = true) var id: Int,
     var name: String,
     var number: Int,
-    var user_name: String
+    var user_name: String?
 )
