@@ -1,12 +1,5 @@
 package com.nasser.appellas.network
 
-import com.nasser.appellas.data.Blogs
-import com.nasser.appellas.data.Contacts
-import com.nasser.appellas.data.Users
-import com.nasser.appellas.data.entity.User
-import okhttp3.RequestBody
-import okhttp3.Response
-import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.http.*
 

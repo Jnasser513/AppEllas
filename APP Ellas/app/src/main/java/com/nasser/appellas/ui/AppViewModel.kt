@@ -1,18 +1,14 @@
 package com.nasser.appellas.ui
 
-import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.nasser.appellas.R
-import com.nasser.appellas.data.Blogs
-import com.nasser.appellas.data.Contacts
-import com.nasser.appellas.data.Users
 import com.nasser.appellas.data.entity.Blog
 import com.nasser.appellas.data.entity.TrustContacts
 import com.nasser.appellas.data.entity.User
-import com.nasser.appellas.network.AppApi
+import com.nasser.appellas.network.*
 import com.nasser.appellas.repository.AppRepository
 import kotlinx.coroutines.launch
 import retrofit2.Call
@@ -260,14 +256,6 @@ class AppViewModel(private val appRepository: AppRepository): ViewModel() {
         }
     }
 
-    fun searchUser(key: String): Users? {
-        var user: Users? = null
-
-        viewModelScope.launch {
-            user = appRepository.searchUsers(key)
-        }
-        return user
-    }
     //Ponemos el livedata en start o end para que no haya perdida de memoria
     fun startShowCall() {
         _showCall.value = true
@@ -605,5 +593,14 @@ class AppViewModel(private val appRepository: AppRepository): ViewModel() {
         viewModelScope.launch {
             appRepository.deleteUser(user)
         }
+    }
+
+    fun searchUserApi(key: String): Users? {
+        var user: Users? = null
+
+        viewModelScope.launch {
+            user = appRepository.searchUsers(key)
+        }
+        return user
     }
 }
